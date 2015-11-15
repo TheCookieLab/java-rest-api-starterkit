@@ -1,0 +1,19 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "setHeader",
+    "title": "Set Header",
+    "description": "Sets the value of a message header",
+    "javaType": "org.apache.camel.model.SetHeaderDefinition",
+    "label": "eip,transformation",
+    "input": "true",
+    "output": "false"
+  },
+  "properties": {
+    "headerName": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Name of message header to set a new value" },
+    "expression": { "kind": "expression", "required": "true", "type": "object", "javaType": "org.apache.camel.model.language.ExpressionDefinition", "oneOf": [ "constant", "el", "exchangeProperty", "groovy", "header", "javaScript", "jsonpath", "jxpath", "language", "method", "mvel", "ognl", "php", "python", "ref", "ruby", "simple", "spel", "sql", "terser", "tokenize" ], "deprecated": "false", "description": "Expression to return the value of the header" },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the id of this node" },
+    "description": { "kind": "element", "required": "false", "type": "object", "javaType": "org.apache.camel.model.DescriptionDefinition", "deprecated": "false", "description": "Sets the description of this node" }
+  }
+}
+

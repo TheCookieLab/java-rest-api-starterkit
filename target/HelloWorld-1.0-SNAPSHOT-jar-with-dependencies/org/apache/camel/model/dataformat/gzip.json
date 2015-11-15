@@ -1,0 +1,16 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "gzip",
+    "title": "GZip",
+    "description": "GZip data format",
+    "javaType": "org.apache.camel.model.dataformat.GzipDataFormat",
+    "label": "dataformat,transformation",
+    "input": "false",
+    "output": "false"
+  },
+  "properties": {
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the value of the id property." }
+  }
+}
+

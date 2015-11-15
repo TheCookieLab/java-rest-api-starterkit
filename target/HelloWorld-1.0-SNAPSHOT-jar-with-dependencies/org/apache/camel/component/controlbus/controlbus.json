@@ -1,0 +1,28 @@
+{
+ "component": {
+    "kind": "component",
+    "scheme": "controlbus",
+    "syntax": "controlbus:command:language",
+    "title": "Control Bus",
+    "description": "The Control Bus component allows sending messages to a control-bus endpoint to control the lifecycle of routes.",
+    "label": "core,monitoring",
+    "producerOnly": "true",
+    "javaType": "org.apache.camel.component.controlbus.ControlBusComponent",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-core",
+    "version": "2.15.2"
+  },
+  "componentProperties": {
+  },
+  "properties": {
+    "command": { "kind": "path", "required": "true", "type": "string", "javaType": "java.lang.String", "enum": [ "route", "language" ], "deprecated": "false", "description": "Command can be either route or language" },
+    "language": { "kind": "path", "type": "string", "javaType": "org.apache.camel.spi.Language", "enum": [ "bean", "constant", "el", "exchangeProperty", "file", "groovy", "header", "jsonpath", "jxpath", "mvel", "ognl", "ref", "simple", "spel", "sql", "terser", "tokenize", "xpath", "xquery", "xtokenize" ], "deprecated": "false", "description": "Allows you to specify the name of a Language to use for evaluating the message body. If there is any result from the evaluation then the result is put in the message body." },
+    "routeId": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "To specify a route by its id." },
+    "action": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "enum": [ "start", "stop", "suspend", "resume", "status" ], "deprecated": "false", "description": "To denote an action that can be either: start stop or status. To either start or stop a route or to get the status of the route as output in the message body. You can use suspend and resume from Camel 2.11.1 onwards to either suspend or resume a route. And from Camel 2.11.1 onwards you can use stats to get performance statics returned in XML format; the routeId option can be used to define which route to get the performance stats for if routeId is not defined then you get statistics for the entire CamelContext." },
+    "async": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to execute the control bus task asynchronously. Important: If this option is enabled then any result from the task is not set on the Exchange. This is only possible if executing tasks synchronously." },
+    "loggingLevel": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.LoggingLevel", "enum": [ "DEBUG", "ERROR", "INFO", "TRACE", "WARN", "OFF" ], "deprecated": "false", "defaultValue": "INFO", "description": "Logging level used for logging when task is done or if any exceptions occurred during processing the task." },
+    "exchangePattern": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.ExchangePattern", "enum": [ "InOnly", "RobustInOnly", "InOut", "InOptionalOut", "OutOnly", "RobustOutOnly", "OutIn", "OutOptionalIn" ], "deprecated": "false", "defaultValue": "InOnly", "description": "Sets the default exchange pattern when creating an exchange." },
+    "synchronous": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Sets whether synchronous processing should be strictly used or Camel is allowed to use asynchronous processing (if supported)." }
+  }
+}
+

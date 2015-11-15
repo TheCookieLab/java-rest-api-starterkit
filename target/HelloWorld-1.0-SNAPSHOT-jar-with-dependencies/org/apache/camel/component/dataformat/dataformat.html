@@ -1,0 +1,67 @@
+<html>
+<header>
+<title>Data Format</title>
+</header>
+<body>
+<h1>Data Format</h1>
+<b>Scheme: dataformat</b>
+<ul>
+<li>core</li>
+<li>transformation</li>
+</ul>
+<table class='table'>
+  <tr>
+    <th>Name</th>
+    <th>Kind</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Deprecated</th>
+    <th>Default Value</th>
+    <th>Enum Values</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>path</td>
+    <td>java.lang.String</td>
+    <td>true</td>
+    <td>false</td>
+    <td></td>
+    <td>Name of data format</td>
+  </tr>
+  <tr>
+    <td>operation</td>
+    <td>path</td>
+    <td>java.lang.String</td>
+    <td>true</td>
+    <td>false</td>
+    <td>marshal<br/>unmarshal</td>
+    <td> Operation to use either marshal or unmarshal
+</td>
+  </tr>
+  <tr>
+    <td>exchangePattern</td>
+    <td>parameter</td>
+    <td>org.apache.camel.ExchangePattern</td>
+    <td></td>
+    <td>false</td>
+    <td>InOnly</td>
+    <td>InOnly<br/>RobustInOnly<br/>InOut<br/>InOptionalOut<br/>OutOnly<br/>RobustOutOnly<br/>OutIn<br/>OutOptionalIn</td>
+    <td>Sets the default exchange pattern when creating an exchange.</td>
+  </tr>
+  <tr>
+    <td>synchronous</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td>false</td>
+    <td></td>
+    <td>Sets whether synchronous processing should be strictly used, or Camel is
+ allowed to use asynchronous processing (if supported).
+ 
+ @param synchronous <tt>true</tt> to enforce synchronous processing</td>
+  </tr>
+</table>
+</body>
+</html>

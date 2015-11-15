@@ -1,0 +1,159 @@
+<html>
+<header>
+<title>VM</title>
+</header>
+<body>
+<h1>VM</h1>
+<b>Scheme: vm</b>
+<ul>
+<li>core</li>
+<li>endpoint</li>
+</ul>
+<table class='table'>
+  <tr>
+    <th>Name</th>
+    <th>Kind</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Deprecated</th>
+    <th>Default Value</th>
+    <th>Enum Values</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>path</td>
+    <td>java.lang.String</td>
+    <td>true</td>
+    <td>false</td>
+    <td></td>
+    <td>Name of queue</td>
+  </tr>
+  <tr>
+    <td>size</td>
+    <td>parameter</td>
+    <td>int</td>
+    <td></td>
+    <td>false</td>
+    <td>2147483647</td>
+    <td></td>
+    <td>The maximum capacity of the SEDA queue (i.e., the number of messages it can hold).</td>
+  </tr>
+  <tr>
+    <td>concurrentConsumers</td>
+    <td>parameter</td>
+    <td>int</td>
+    <td></td>
+    <td>false</td>
+    <td>1</td>
+    <td></td>
+    <td>Number of concurrent threads processing exchanges.</td>
+  </tr>
+  <tr>
+    <td>multipleConsumers</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td></td>
+    <td></td>
+    <td>Specifies whether multiple consumers are allowed. If enabled, you can use SEDA for Publish-Subscribe messaging.
+ That is, you can send a message to the SEDA queue and have each consumer receive a copy of the message.
+ When enabled, this option should be specified on every consumer endpoint.</td>
+  </tr>
+  <tr>
+    <td>purgeWhenStopping</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td></td>
+    <td></td>
+    <td>Whether to purge the task queue when stopping the consumer/route.
+ This allows to stop faster, as any pending messages on the queue is discarded.</td>
+  </tr>
+  <tr>
+    <td>pollTimeout</td>
+    <td>parameter</td>
+    <td>int</td>
+    <td></td>
+    <td>false</td>
+    <td>1000</td>
+    <td></td>
+    <td>The timeout used when polling. When a timeout occurs, the consumer can check whether it is allowed to continue running.
+ Setting a lower value allows the consumer to react more quickly upon shutdown.</td>
+  </tr>
+  <tr>
+    <td>waitForTaskToComplete</td>
+    <td>parameter</td>
+    <td>org.apache.camel.WaitForTaskToComplete</td>
+    <td></td>
+    <td>false</td>
+    <td>IfReplyExpected</td>
+    <td>Never<br/>IfReplyExpected<br/>Always</td>
+    <td>Option to specify whether the caller should wait for the async task to complete or not before continuing.
+ The following three options are supported: Always, Never or IfReplyExpected.
+ The first two values are self-explanatory.
+ The last value, IfReplyExpected, will only wait if the message is Request Reply based.
+ The default option is IfReplyExpected.</td>
+  </tr>
+  <tr>
+    <td>timeout</td>
+    <td>parameter</td>
+    <td>long</td>
+    <td></td>
+    <td>false</td>
+    <td>30000</td>
+    <td></td>
+    <td>Timeout (in milliseconds) before a SEDA producer will stop waiting for an asynchronous task to complete.
+ You can disable timeout by using 0 or a negative value.</td>
+  </tr>
+  <tr>
+    <td>blockWhenFull</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td></td>
+    <td></td>
+    <td>Whether a thread that sends messages to a full SEDA queue will block until the queue's capacity is no longer exhausted.
+ By default, an exception will be thrown stating that the queue is full.
+ By enabling this option, the calling thread will instead block and wait until the message can be accepted.</td>
+  </tr>
+  <tr>
+    <td>failIfNoConsumers</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td></td>
+    <td></td>
+    <td>Whether the producer should fail by throwing an exception, when sending to a SEDA queue with no active consumers.</td>
+  </tr>
+  <tr>
+    <td>exchangePattern</td>
+    <td>parameter</td>
+    <td>org.apache.camel.ExchangePattern</td>
+    <td></td>
+    <td>false</td>
+    <td>InOnly</td>
+    <td>InOnly<br/>RobustInOnly<br/>InOut<br/>InOptionalOut<br/>OutOnly<br/>RobustOutOnly<br/>OutIn<br/>OutOptionalIn</td>
+    <td>Sets the default exchange pattern when creating an exchange.</td>
+  </tr>
+  <tr>
+    <td>synchronous</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td>false</td>
+    <td></td>
+    <td>Sets whether synchronous processing should be strictly used, or Camel is
+ allowed to use asynchronous processing (if supported).
+ 
+ @param synchronous <tt>true</tt> to enforce synchronous processing</td>
+  </tr>
+</table>
+<h2>vm consumer</h2>
+</body>
+</html>

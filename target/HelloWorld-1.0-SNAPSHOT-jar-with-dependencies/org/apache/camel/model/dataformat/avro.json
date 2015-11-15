@@ -1,0 +1,17 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "avro",
+    "title": "Avro",
+    "description": "Avro data format",
+    "javaType": "org.apache.camel.model.dataformat.AvroDataFormat",
+    "label": "dataformat,transformation",
+    "input": "false",
+    "output": "false"
+  },
+  "properties": {
+    "instanceClassName": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Class name to use for marshal and unmarshalling" },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the value of the id property." }
+  }
+}
+

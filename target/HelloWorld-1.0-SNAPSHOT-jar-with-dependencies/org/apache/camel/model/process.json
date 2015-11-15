@@ -1,0 +1,18 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "process",
+    "title": "Process",
+    "description": "Calls a Camel processor.",
+    "javaType": "org.apache.camel.model.ProcessDefinition",
+    "label": "eip,endpoint",
+    "input": "true",
+    "output": "false"
+  },
+  "properties": {
+    "ref": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Reference to the Processor to lookup in the registry to use." },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the id of this node" },
+    "description": { "kind": "element", "required": "false", "type": "object", "javaType": "org.apache.camel.model.DescriptionDefinition", "deprecated": "false", "description": "Sets the description of this node" }
+  }
+}
+

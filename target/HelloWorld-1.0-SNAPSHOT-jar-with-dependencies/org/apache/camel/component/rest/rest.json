@@ -1,0 +1,32 @@
+{
+ "component": {
+    "kind": "component",
+    "scheme": "rest",
+    "syntax": "rest:method:path:uriTemplate",
+    "title": "REST",
+    "description": "The Core Camel Java DSL based router",
+    "label": "core,http,rest",
+    "consumerOnly": "true",
+    "javaType": "org.apache.camel.component.rest.RestComponent",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-core",
+    "version": "2.15.2"
+  },
+  "componentProperties": {
+  },
+  "properties": {
+    "method": { "kind": "path", "required": "true", "type": "string", "javaType": "java.lang.String", "enum": [ "get", "post", "put", "delete", "patch", "head", "trace", "connect", "options" ], "deprecated": "false", "description": "HTTP method to use." },
+    "path": { "kind": "path", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The base path" },
+    "uriTemplate": { "kind": "path", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The uri template" },
+    "consumes": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Media type such as: 'text/xml' or 'application/json' this REST service accepts. By default we accept all kinds of types." },
+    "produces": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Media type such as: 'text/xml' or 'application/json' this REST service returns." },
+    "componentName": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The Camel Rest component to use for the REST transport such as restlet spark-rest. If no component has been explicit configured then Camel will lookup if there is a Camel component that integrates with the Rest DSL or if a org.apache.camel.spi.RestConsumerFactory is registered in the registry. If either one is found then that is being used." },
+    "inType": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "To declare the incoming POJO binding type as a FQN class name" },
+    "outType": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "To declare the outgoing POJO binding type as a FQN class name" },
+    "routeId": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Name of the route this REST services creates" },
+    "description": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Human description to document this REST service" },
+    "exchangePattern": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.ExchangePattern", "enum": [ "InOnly", "RobustInOnly", "InOut", "InOptionalOut", "OutOnly", "RobustOutOnly", "OutIn", "OutOptionalIn" ], "deprecated": "false", "defaultValue": "InOnly", "description": "Sets the default exchange pattern when creating an exchange." },
+    "synchronous": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Sets whether synchronous processing should be strictly used or Camel is allowed to use asynchronous processing (if supported)." }
+  }
+}
+

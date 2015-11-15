@@ -1,0 +1,23 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "idempotentConsumer",
+    "title": "Idempotent Consumer",
+    "description": "Filters out duplicate messages",
+    "javaType": "org.apache.camel.model.IdempotentConsumerDefinition",
+    "label": "eip,routing",
+    "input": "true",
+    "output": "true"
+  },
+  "properties": {
+    "messageIdRepositoryRef": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the reference name of the message id repository" },
+    "eager": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "true", "description": "Sets whether to eagerly add the key to the idempotent repository or wait until the exchange is complete. Eager is default enabled." },
+    "skipDuplicate": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "true", "description": "Sets whether to skip duplicates or not. The default behavior is to skip duplicates. A duplicate message would have the Exchange property link org.apache.camel.ExchangeDUPLICATE_MESSAGE set to a link BooleanTRUE value. A none duplicate message will not have this property set." },
+    "removeOnFailure": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "true", "description": "Sets whether to remove or keep the key on failure. The default behavior is to remove the key on failure." },
+    "expression": { "kind": "expression", "required": "true", "type": "object", "javaType": "org.apache.camel.model.language.ExpressionDefinition", "oneOf": [ "constant", "el", "exchangeProperty", "groovy", "header", "javaScript", "jsonpath", "jxpath", "language", "method", "mvel", "ognl", "php", "python", "ref", "ruby", "simple", "spel", "sql", "terser", "tokenize" ], "deprecated": "false", "description": "Expression used to calculate the correlation key to use for duplicate check. The Exchange which has the same correlation key is regarded as a duplicate and will be rejected." },
+    "outputs": { "kind": "element", "required": "true", "type": "array", "javaType": "java.util.List<org.apache.camel.model.ProcessorDefinition<?>>", "oneOf": [ "aggregate", "aop", "bean", "choice", "convertBodyTo", "delay", "doCatch", "doFinally", "doTry", "dynamicRouter", "enrich", "filter", "idempotentConsumer", "inOnly", "inOut", "intercept", "interceptFrom", "interceptSendToEndpoint", "loadBalance", "log", "loop", "marshal", "multicast", "onCompletion", "onException", "otherwise", "pipeline", "policy", "pollEnrich", "process", "recipientList", "removeHeader", "removeHeaders", "removeProperties", "removeProperty", "resequence", "rollback", "routingSlip", "sample", "setBody", "setExchangePattern", "setFaultBody", "setHeader", "setOutHeader", "setProperty", "sort", "split", "stop", "threads", "throttle", "throwException", "to", "transacted", "transform", "unmarshal", "validate", "when", "whenSkipSendToEndpoint", "wireTap" ], "deprecated": "false" },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the id of this node" },
+    "description": { "kind": "element", "required": "false", "type": "object", "javaType": "org.apache.camel.model.DescriptionDefinition", "deprecated": "false", "description": "Sets the description of this node" }
+  }
+}
+

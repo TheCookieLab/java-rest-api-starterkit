@@ -1,0 +1,30 @@
+{
+ "component": {
+    "kind": "component",
+    "scheme": "timer",
+    "syntax": "timer:timerName",
+    "title": "Timer",
+    "description": "The Timer Component is for generating message exchanges when a timer fires.",
+    "label": "core,scheduling",
+    "consumerOnly": "true",
+    "javaType": "org.apache.camel.component.timer.TimerComponent",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-core",
+    "version": "2.15.2"
+  },
+  "componentProperties": {
+  },
+  "properties": {
+    "timerName": { "kind": "path", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The name of the timer" },
+    "time": { "kind": "parameter", "type": "object", "javaType": "java.util.Date", "deprecated": "false", "description": "A java.util.Date the first event should be generated. If using the URI the pattern expected is: yyyy-MM-dd HH:mm:ss or yyyy-MM-dd'T'HH:mm:ss." },
+    "period": { "kind": "parameter", "type": "integer", "javaType": "long", "deprecated": "false", "defaultValue": "1000", "description": "If greater than 0 generate periodic events every period milliseconds. The default value is 1000." },
+    "delay": { "kind": "parameter", "type": "integer", "javaType": "long", "deprecated": "false", "defaultValue": "1000", "description": "The number of milliseconds to wait before the first event is generated. Should not be used in conjunction with the time option. The default value is 1000." },
+    "fixedRate": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Events take place at approximately regular intervals separated by the specified period." },
+    "daemon": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "true", "description": "Specifies whether or not the thread associated with the timer endpoint runs as a daemon. The default value is true." },
+    "repeatCount": { "kind": "parameter", "type": "integer", "javaType": "long", "deprecated": "false", "defaultValue": "0", "description": "Specifies a maximum limit of number of fires. So if you set it to 1 the timer will only fire once. If you set it to 5 it will only fire five times. A value of zero or negative means fire forever." },
+    "timer": { "kind": "parameter", "type": "object", "javaType": "java.util.Timer", "deprecated": "false", "description": "To use a custom Timer" },
+    "exchangePattern": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.ExchangePattern", "enum": [ "InOnly", "RobustInOnly", "InOut", "InOptionalOut", "OutOnly", "RobustOutOnly", "OutIn", "OutOptionalIn" ], "deprecated": "false", "defaultValue": "InOnly", "description": "Sets the default exchange pattern when creating an exchange." },
+    "synchronous": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Sets whether synchronous processing should be strictly used or Camel is allowed to use asynchronous processing (if supported)." }
+  }
+}
+

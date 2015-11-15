@@ -1,0 +1,26 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "tokenize",
+    "title": "Tokenize",
+    "description": "For expressions and predicates using a body or header tokenizer.",
+    "javaType": "org.apache.camel.model.language.TokenizerExpression",
+    "label": "language",
+    "input": "false",
+    "output": "false"
+  },
+  "properties": {
+    "token": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The (start) token to use as tokenizer for example \n for a new line token" },
+    "endToken": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The end token to use as tokenizer if using start/end token pairs." },
+    "inheritNamespaceTagName": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "To inherit namepaces from a root/parent tag name" },
+    "headerName": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Name of header to tokenize instead of using the message body." },
+    "regex": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "If the token is a regular expression pattern. The default value is false" },
+    "xml": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether the input is XML messages. This option must be set to true if working with XML payloads." },
+    "includeTokens": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to include the tokens in the parts The default value is false" },
+    "group": { "kind": "attribute", "required": "false", "type": "integer", "javaType": "java.lang.Integer", "deprecated": "false", "description": "To group N parts together for example to split big files into chunks of 1000 lines." },
+    "expression": { "kind": "value", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The expression value in your chosen language syntax" },
+    "trim": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "true", "description": "Whether to trim the value to remove leading and trailing whitespaces and line breaks" },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the id of this node" }
+  }
+}
+

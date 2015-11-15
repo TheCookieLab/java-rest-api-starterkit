@@ -1,0 +1,22 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "beanio",
+    "title": "BeanIO",
+    "description": "BeanIO data format",
+    "javaType": "org.apache.camel.model.dataformat.BeanioDataFormat",
+    "label": "dataformat,transformation",
+    "input": "false",
+    "output": "false"
+  },
+  "properties": {
+    "mapping": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The BeanIO mapping file. Is by default loaded from the classpath. You can prefix with file: http: or classpath: to denote from where to load the mapping file." },
+    "streamName": { "kind": "attribute", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The name of the stream to use." },
+    "ignoreUnidentifiedRecords": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to ignore unidentified records." },
+    "ignoreUnexpectedRecords": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to ignore unexpected records." },
+    "ignoreInvalidRecords": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to ignore invalid records." },
+    "encoding": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The charset to use. Is by default the JVM platform default charset." },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the value of the id property." }
+  }
+}
+

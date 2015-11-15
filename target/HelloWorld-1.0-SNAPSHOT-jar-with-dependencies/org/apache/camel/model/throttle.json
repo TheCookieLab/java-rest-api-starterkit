@@ -1,0 +1,24 @@
+{
+ "model": {
+    "kind": "model",
+    "name": "throttle",
+    "title": "Throttle",
+    "description": "Controls the rate at which messages are passed to the next node in the route",
+    "javaType": "org.apache.camel.model.ThrottleDefinition",
+    "label": "eip,routing",
+    "input": "true",
+    "output": "true"
+  },
+  "properties": {
+    "executorServiceRef": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the ExecutorService which could be used by throttle definition" },
+    "timePeriodMillis": { "kind": "attribute", "required": "false", "type": "integer", "javaType": "java.lang.Long", "deprecated": "false", "defaultValue": "1000", "description": "Sets the time period during which the maximum request count is valid for" },
+    "asyncDelayed": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Enables asynchronous delay which means the thread will no block while delaying." },
+    "callerRunsWhenRejected": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "true", "description": "Whether or not the caller should run the task when it was rejected by the thread pool. Is by default true" },
+    "rejectExecution": { "kind": "attribute", "required": "false", "type": "boolean", "javaType": "java.lang.Boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether or not throttler throws the ThrottlerRejectedExecutionException when the exchange exceeds the request limit Is by default false" },
+    "expression": { "kind": "expression", "required": "true", "type": "object", "javaType": "org.apache.camel.model.language.ExpressionDefinition", "oneOf": [ "constant", "el", "exchangeProperty", "groovy", "header", "javaScript", "jsonpath", "jxpath", "language", "method", "mvel", "ognl", "php", "python", "ref", "ruby", "simple", "spel", "sql", "terser", "tokenize" ], "deprecated": "false", "description": "Expression to configure the maximum number of messages to throttle per request" },
+    "outputs": { "kind": "element", "required": "true", "type": "array", "javaType": "java.util.List<org.apache.camel.model.ProcessorDefinition<?>>", "oneOf": [ "aggregate", "aop", "bean", "choice", "convertBodyTo", "delay", "doCatch", "doFinally", "doTry", "dynamicRouter", "enrich", "filter", "idempotentConsumer", "inOnly", "inOut", "intercept", "interceptFrom", "interceptSendToEndpoint", "loadBalance", "log", "loop", "marshal", "multicast", "onCompletion", "onException", "otherwise", "pipeline", "policy", "pollEnrich", "process", "recipientList", "removeHeader", "removeHeaders", "removeProperties", "removeProperty", "resequence", "rollback", "routingSlip", "sample", "setBody", "setExchangePattern", "setFaultBody", "setHeader", "setOutHeader", "setProperty", "sort", "split", "stop", "threads", "throttle", "throwException", "to", "transacted", "transform", "unmarshal", "validate", "when", "whenSkipSendToEndpoint", "wireTap" ], "deprecated": "false" },
+    "id": { "kind": "attribute", "required": "false", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "Sets the id of this node" },
+    "description": { "kind": "element", "required": "false", "type": "object", "javaType": "org.apache.camel.model.DescriptionDefinition", "deprecated": "false", "description": "Sets the description of this node" }
+  }
+}
+

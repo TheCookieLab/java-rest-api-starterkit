@@ -1,0 +1,40 @@
+{
+ "component": {
+    "kind": "component",
+    "scheme": "xslt",
+    "syntax": "xslt:resourceUri",
+    "title": "XSLT",
+    "description": "The XSLT Component is for performing XSLT transformations of messages",
+    "label": "core,transformation",
+    "producerOnly": "true",
+    "javaType": "org.apache.camel.component.xslt.XsltComponent",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-core",
+    "version": "2.15.2"
+  },
+  "componentProperties": {
+    "xmlConverter": { "kind": "property", "type": "object", "javaType": "org.apache.camel.converter.jaxp.XmlConverter", "deprecated": "false", "description": "To use a custom implementation of org.apache.camel.converter.jaxp.XmlConverter" },
+    "uriResolver": { "kind": "property", "type": "object", "javaType": "javax.xml.transform.URIResolver", "deprecated": "false", "description": "To use a custom javax.xml.transform.URIResolver" },
+    "contentCache": { "kind": "property", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Cache for the resource content (the stylesheet file) when it is loaded. If set to false Camel will reload the stylesheet file on each message processing. This is good for development. A cached stylesheet can be forced to reload at runtime via JMX using the clearCachedStylesheet operation." },
+    "saxon": { "kind": "property", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to use Saxon as the transformerFactoryClass. If enabled then the class net.sf.saxon.TransformerFactoryImpl. You would need to add Saxon to the classpath." }
+  },
+  "properties": {
+    "resourceUri": { "kind": "path", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The name of the template to load from classpath or file system" },
+    "contentCache": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "true", "description": "Cache for the resource content (the stylesheet file) when it is loaded. If set to false Camel will reload the stylesheet file on each message processing. This is good for development. A cached stylesheet can be forced to reload at runtime via JMX using the clearCachedStylesheet operation." },
+    "converter": { "kind": "parameter", "type": "object", "javaType": "org.apache.camel.converter.jaxp.XmlConverter", "deprecated": "false", "description": "To use a custom implementation of org.apache.camel.converter.jaxp.XmlConverter" },
+    "transformerFactoryClass": { "kind": "parameter", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "To use a custom XSLT transformer factory specified as a FQN class name" },
+    "transformerFactory": { "kind": "parameter", "type": "object", "javaType": "javax.xml.transform.TransformerFactory", "deprecated": "false", "description": "To use a custom XSLT transformer factory" },
+    "saxon": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Whether to use Saxon as the transformerFactoryClass. If enabled then the class net.sf.saxon.TransformerFactoryImpl. You would need to add Saxon to the classpath." },
+    "resultHandlerFactory": { "kind": "parameter", "type": "object", "javaType": "org.apache.camel.builder.xml.ResultHandlerFactory", "deprecated": "false", "description": "Allows you to use a custom org.apache.camel.builder.xml.ResultHandlerFactory which is capable of using custom org.apache.camel.builder.xml.ResultHandler types." },
+    "failOnNullBody": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "true", "description": "Whether or not to throw an exception if the input body is null." },
+    "output": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.component.xslt.XsltOutput", "enum": [ "string", "bytes", "DOM", "file" ], "deprecated": "false", "defaultValue": "string", "description": "Option to specify which output type to use. Possible values are: string bytes DOM file. The first three options are all in memory based where as file is streamed directly to a java.io.File. For file you must specify the filename in the IN header with the key Exchange.XSLT_FILE_NAME which is also CamelXsltFileName. Also any paths leading to the filename must be created beforehand otherwise an exception is thrown at runtime." },
+    "transformerCacheSize": { "kind": "parameter", "type": "integer", "javaType": "int", "deprecated": "false", "defaultValue": "0", "description": "The number of javax.xml.transform.Transformer object that are cached for reuse to avoid calls to Template.newTransformer()." },
+    "errorListener": { "kind": "parameter", "type": "object", "javaType": "javax.xml.transform.ErrorListener", "deprecated": "false", "description": "Allows to configure to use a custom javax.xml.transform.ErrorListener. Beware when doing this then the default error listener which captures any errors or fatal errors and store information on the Exchange as properties is not in use. So only use this option for special use-cases." },
+    "uriResolver": { "kind": "parameter", "type": "object", "javaType": "javax.xml.transform.URIResolver", "deprecated": "false", "description": "To use a custom javax.xml.transform.URIResolver" },
+    "allowStAX": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "true", "description": "Whether to allow using StAX as the javax.xml.transform.Source." },
+    "deleteOutputFile": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "If you have output=file then this option dictates whether or not the output file should be deleted when the Exchange is done processing. For example suppose the output file is a temporary file then it can be a good idea to delete it after use." },
+    "exchangePattern": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.ExchangePattern", "enum": [ "InOnly", "RobustInOnly", "InOut", "InOptionalOut", "OutOnly", "RobustOutOnly", "OutIn", "OutOptionalIn" ], "deprecated": "false", "defaultValue": "InOnly", "description": "Sets the default exchange pattern when creating an exchange." },
+    "synchronous": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Sets whether synchronous processing should be strictly used or Camel is allowed to use asynchronous processing (if supported)." }
+  }
+}
+

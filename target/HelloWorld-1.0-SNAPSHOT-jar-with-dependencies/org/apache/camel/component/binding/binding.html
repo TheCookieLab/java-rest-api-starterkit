@@ -1,0 +1,73 @@
+<html>
+<header>
+<title>Binding</title>
+</header>
+<body>
+<h1>Binding</h1>
+<b>Scheme: binding</b>
+<ul>
+<li>core</li>
+<li>transformation</li>
+</ul>
+<p>Applies a {@link org.apache.camel.spi.Binding} to an underlying {@link Endpoint} so that the binding processes messages
+ before its sent to the endpoint and processes messages received by the endpoint consumer before its passed
+ to the real consumer.</p>
+<table class='table'>
+  <tr>
+    <th>Name</th>
+    <th>Kind</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Deprecated</th>
+    <th>Default Value</th>
+    <th>Enum Values</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>bindingName</td>
+    <td>path</td>
+    <td>java.lang.String</td>
+    <td>true</td>
+    <td>false</td>
+    <td></td>
+    <td> Name of the binding to lookup in the Camel registry.
+</td>
+  </tr>
+  <tr>
+    <td>delegateUri</td>
+    <td>path</td>
+    <td>java.lang.String</td>
+    <td>true</td>
+    <td>false</td>
+    <td></td>
+    <td> Uri of the delegate endpoint.
+</td>
+  </tr>
+  <tr>
+    <td>exchangePattern</td>
+    <td>parameter</td>
+    <td>org.apache.camel.ExchangePattern</td>
+    <td></td>
+    <td>false</td>
+    <td>InOnly</td>
+    <td>InOnly<br/>RobustInOnly<br/>InOut<br/>InOptionalOut<br/>OutOnly<br/>RobustOutOnly<br/>OutIn<br/>OutOptionalIn</td>
+    <td>Sets the default exchange pattern when creating an exchange.</td>
+  </tr>
+  <tr>
+    <td>synchronous</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td>false</td>
+    <td></td>
+    <td>Sets whether synchronous processing should be strictly used, or Camel is
+ allowed to use asynchronous processing (if supported).
+ 
+ @param synchronous <tt>true</tt> to enforce synchronous processing</td>
+  </tr>
+</table>
+<h2>binding consumer</h2>
+<p>Applies a {@link org.apache.camel.spi.Binding} to a consumer</p>
+</body>
+</html>

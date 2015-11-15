@@ -1,0 +1,81 @@
+<html>
+<header>
+<title>Direct VM</title>
+</header>
+<body>
+<h1>Direct VM</h1>
+<b>Scheme: direct-vm</b>
+<ul>
+<li>core</li>
+<li>endpoint</li>
+</ul>
+<p>The direct-vm endpoint.</p>
+<table class='table'>
+  <tr>
+    <th>Name</th>
+    <th>Kind</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Deprecated</th>
+    <th>Default Value</th>
+    <th>Enum Values</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>path</td>
+    <td>java.lang.String</td>
+    <td>true</td>
+    <td>false</td>
+    <td></td>
+    <td>Name of direct-vm endpoint</td>
+  </tr>
+  <tr>
+    <td>block</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td></td>
+    <td></td>
+    <td>If sending a message to a direct endpoint which has no active consumer,
+ then we can tell the producer to block and wait for the consumer to become active.</td>
+  </tr>
+  <tr>
+    <td>timeout</td>
+    <td>parameter</td>
+    <td>long</td>
+    <td></td>
+    <td>false</td>
+    <td>30000</td>
+    <td></td>
+    <td>The timeout value to use if block is enabled.</td>
+  </tr>
+  <tr>
+    <td>exchangePattern</td>
+    <td>parameter</td>
+    <td>org.apache.camel.ExchangePattern</td>
+    <td></td>
+    <td>false</td>
+    <td>InOnly</td>
+    <td>InOnly<br/>RobustInOnly<br/>InOut<br/>InOptionalOut<br/>OutOnly<br/>RobustOutOnly<br/>OutIn<br/>OutOptionalIn</td>
+    <td>Sets the default exchange pattern when creating an exchange.</td>
+  </tr>
+  <tr>
+    <td>synchronous</td>
+    <td>parameter</td>
+    <td>boolean</td>
+    <td></td>
+    <td>false</td>
+    <td>false</td>
+    <td></td>
+    <td>Sets whether synchronous processing should be strictly used, or Camel is
+ allowed to use asynchronous processing (if supported).
+ 
+ @param synchronous <tt>true</tt> to enforce synchronous processing</td>
+  </tr>
+</table>
+<h2>direct-vm consumer</h2>
+<p>The direct consumer.</p>
+</body>
+</html>

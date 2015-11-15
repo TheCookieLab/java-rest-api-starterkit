@@ -1,0 +1,40 @@
+{
+ "component": {
+    "kind": "component",
+    "scheme": "scheduler",
+    "syntax": "scheduler:name",
+    "title": "Scheduler",
+    "description": "The Core Camel Java DSL based router",
+    "label": "core,scheduling",
+    "consumerOnly": "true",
+    "javaType": "org.apache.camel.component.scheduler.SchedulerComponent",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-core",
+    "version": "2.15.2"
+  },
+  "componentProperties": {
+    "concurrentTasks": { "kind": "property", "type": "integer", "javaType": "int", "deprecated": "false", "description": "Number of threads used by the scheduling thread pool. Is by default using a single thread" }
+  },
+  "properties": {
+    "name": { "kind": "path", "required": "true", "type": "string", "javaType": "java.lang.String", "deprecated": "false", "description": "The name of the scheduler" },
+    "concurrentTasks": { "kind": "parameter", "type": "integer", "javaType": "int", "deprecated": "false", "defaultValue": "1", "description": "Number of threads used by the scheduling thread pool. Is by default using a single thread" },
+    "startScheduler": { "kind": "parameter", "label": "consumer", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "true", "description": "Whether the scheduler should be auto started." },
+    "initialDelay": { "kind": "parameter", "label": "consumer", "type": "integer", "javaType": "long", "deprecated": "false", "defaultValue": "1000", "description": "Milliseconds before the first poll starts." },
+    "delay": { "kind": "parameter", "label": "consumer", "type": "integer", "javaType": "long", "deprecated": "false", "defaultValue": "500", "description": "Milliseconds before the next poll." },
+    "timeUnit": { "kind": "parameter", "label": "consumer", "type": "string", "javaType": "java.util.concurrent.TimeUnit", "enum": [ "NANOSECONDS", "MICROSECONDS", "MILLISECONDS", "SECONDS", "MINUTES", "HOURS", "DAYS" ], "deprecated": "false", "defaultValue": "MILLISECONDS", "description": "Time unit for initialDelay and delay options." },
+    "useFixedDelay": { "kind": "parameter", "label": "consumer", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "true", "description": "Controls if fixed delay or fixed rate is used. See ScheduledExecutorService in JDK for details." },
+    "pollStrategy": { "kind": "parameter", "label": "consumer", "type": "object", "javaType": "org.apache.camel.spi.PollingConsumerPollStrategy", "deprecated": "false", "description": "A pluggable org.apache.camel.PollingConsumerPollingStrategy allowing you to provide your custom implementation to control error handling usually occurred during the poll operation before an Exchange have been created and being routed in Camel. In other words the error occurred while the polling was gathering information for instance access to a file network failed so Camel cannot access it to scan for files. The default implementation will log the caused exception at WARN level and ignore it." },
+    "runLoggingLevel": { "kind": "parameter", "label": "consumer", "type": "string", "javaType": "org.apache.camel.LoggingLevel", "enum": [ "DEBUG", "ERROR", "INFO", "TRACE", "WARN", "OFF" ], "deprecated": "false", "defaultValue": "TRACE", "description": "The consumer logs a start/complete log line when it polls. This option allows you to configure the logging level for that." },
+    "sendEmptyMessageWhenIdle": { "kind": "parameter", "label": "consumer", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "If the polling consumer did not poll any files you can enable this option to send an empty message (no body) instead." },
+    "greedy": { "kind": "parameter", "label": "consumer", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "If greedy is enabled then the ScheduledPollConsumer will run immediately again if the previous run polled 1 or more messages." },
+    "scheduler": { "kind": "parameter", "label": "consumer", "type": "string", "javaType": "org.apache.camel.spi.ScheduledPollConsumerScheduler", "enum": [ "spring", "quartz2" ], "deprecated": "false", "description": "Allow to plugin a custom org.apache.camel.spi.ScheduledPollConsumerScheduler to use as the scheduler for firing when the polling consumer runs. The default implementation uses the ScheduledExecutorService and there is a Quartz2 and Spring based which supports CRON expressions. Notice: If using a custom scheduler then the options for initialDelay useFixedDelay timeUnit and scheduledExecutorService may not be in use. Use the text quartz2 to refer to use the Quartz2 scheduler; and use the text spring to use the Spring based; and use the text myScheduler to refer to a custom scheduler by its id in the Registry. See Quartz2 page for an example." },
+    "schedulerProperties": { "kind": "parameter", "label": "consumer", "type": "object", "javaType": "java.util.Map<java.lang.String,java.lang.Object>", "deprecated": "false", "description": "To configure additional properties when using a custom scheduler or any of the Quartz2 Spring based scheduler." },
+    "scheduledExecutorService": { "kind": "parameter", "label": "consumer", "type": "object", "javaType": "java.util.concurrent.ScheduledExecutorService", "deprecated": "false", "description": "Allows for configuring a custom/shared thread pool to use for the consumer. By default each consumer has its own single threaded thread pool. This option allows you to share a thread pool among multiple consumers." },
+    "backoffMultiplier": { "kind": "parameter", "label": "consumer", "type": "integer", "javaType": "int", "deprecated": "false", "description": "To let the scheduled polling consumer backoff if there has been a number of subsequent idles/errors in a row. The multiplier is then the number of polls that will be skipped before the next actual attempt is happening again. When this option is in use then backoffIdleThreshold and/or backoffErrorThreshold must also be configured." },
+    "backoffIdleThreshold": { "kind": "parameter", "label": "consumer", "type": "integer", "javaType": "int", "deprecated": "false", "description": "The number of subsequent idle polls that should happen before the backoffMultipler should kick-in." },
+    "backoffErrorThreshold": { "kind": "parameter", "label": "consumer", "type": "integer", "javaType": "int", "deprecated": "false", "description": "The number of subsequent error polls (failed due some error) that should happen before the backoffMultipler should kick-in." },
+    "exchangePattern": { "kind": "parameter", "type": "string", "javaType": "org.apache.camel.ExchangePattern", "enum": [ "InOnly", "RobustInOnly", "InOut", "InOptionalOut", "OutOnly", "RobustOutOnly", "OutIn", "OutOptionalIn" ], "deprecated": "false", "defaultValue": "InOnly", "description": "Sets the default exchange pattern when creating an exchange." },
+    "synchronous": { "kind": "parameter", "type": "boolean", "javaType": "boolean", "deprecated": "false", "defaultValue": "false", "description": "Sets whether synchronous processing should be strictly used or Camel is allowed to use asynchronous processing (if supported)." }
+  }
+}
+
