@@ -22,22 +22,21 @@ public class Main {
 
         try {
 
+            logger.info("Starting HelloWorld");
             CamelContext context = new DefaultCamelContext();
             context.addRoutes(new RouteBuilderImpl());
             
             context.start();
-            
-            logger.info("Hello World!");
-            
+      
             for (int i = 0; i < 600; i++)
             {
                 final long sleepDurationInMs = 1000;
                 Thread.sleep(sleepDurationInMs);
-                //logger.debug("Sleeping for " + sleepDurationInMs);
             }
                  
-
             context.stop();
+            logger.info("Stopping HelloWorld");
+            
         }catch (InterruptedException iex) {
             throw iex;
         }

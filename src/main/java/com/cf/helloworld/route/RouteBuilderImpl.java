@@ -5,6 +5,8 @@
  */
 package com.cf.helloworld.route;
 
+import com.cf.helloworld.processor.DefaultGetProcessor;
+import com.cf.helloworld.processor.DefaultPostProcessor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 
@@ -14,22 +16,27 @@ import org.apache.camel.model.rest.RestBindingMode;
  */
 public class RouteBuilderImpl extends RouteBuilder
 {
-    
 
     @Override
     public void configure() throws Exception
     {
         restConfiguration().component("spark-rest").scheme("http").host("localhost").port(9091).bindingMode(RestBindingMode.auto).enableCORS(true);
+
+        rest("/customers/")
+                .get("/{id}").to("direct:customerDetail")
+                .get("/{id}/orders").to("direct:customerOrders")
+                .post("/neworder").to("direct:customerNewOrder");
         
-        rest("/say")
-                .get("/hello").to("direct:hello")
-                .get("/bye").consumes("application/json").to("direct:bye")
-                .post("/bye").to("mock:update");
- 
-            from("direct:hello")
-                    .log("inside direct:hello")
-                .transform().constant("Hello World");
-            from("direct:bye")
-                .transform().constant("Bye World");
+        from("direct:customerDetail")
+                .process(new DefaultGetProcessor())
+                .log("customerDetail body: ${body}");
+        
+         from("direct:customerOrders")
+                .process(new DefaultGetProcessor())
+                .log("customerOrders body: ${body}");
+         
+         from("direct:customerNewOrder")
+                .process(new DefaultPostProcessor())
+                .log("customerNewOrder body: ${body}");
     }
 }
