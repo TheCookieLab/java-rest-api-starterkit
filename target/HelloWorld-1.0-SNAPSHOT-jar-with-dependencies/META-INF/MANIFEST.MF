@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
-Created-By: Apache Maven
-Built-By: davidpang
-Build-Jdk: 1.8.0_66
-Main-Class: com.cf.helloworld.Main
-

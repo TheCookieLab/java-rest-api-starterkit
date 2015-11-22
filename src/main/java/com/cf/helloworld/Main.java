@@ -5,8 +5,7 @@
  */
 package com.cf.helloworld;
 
-import com.cf.helloworld.component.GmailComponent;
-import com.cf.helloworld.endpoint.GmailEndpoint;
+import com.cf.helloworld.route.RouteBuilderImpl;
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.slf4j.Logger;
@@ -18,22 +17,32 @@ import org.slf4j.LoggerFactory;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException  {
         final Logger logger = LoggerFactory.getLogger(Main.class);
 
         try {
 
             CamelContext context = new DefaultCamelContext();
+            context.addRoutes(new RouteBuilderImpl());
             
             context.start();
             
-            
-
             logger.info("Hello World!");
+            
+            for (int i = 0; i < 600; i++)
+            {
+                final long sleepDurationInMs = 1000;
+                Thread.sleep(sleepDurationInMs);
+                //logger.debug("Sleeping for " + sleepDurationInMs);
+            }
+                 
 
             context.stop();
-        } catch (Exception ex) {
-
+        }catch (InterruptedException iex) {
+            throw iex;
+        }
+        catch (Exception ex) {
+            logger.error("Main failed - " + ex.getMessage(), ex);
         }
     }
 }
