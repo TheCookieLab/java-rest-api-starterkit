@@ -71,5 +71,10 @@
             <artifactId>camel-spark-rest</artifactId>
             <version>2.16.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-gson</artifactId>
+            <version>2.16.0</version>
+        </dependency>
     </dependencies>
 </project>

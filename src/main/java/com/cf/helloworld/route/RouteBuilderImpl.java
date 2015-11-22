@@ -8,6 +8,7 @@ package com.cf.helloworld.route;
 import com.cf.helloworld.processor.DefaultGetProcessor;
 import com.cf.helloworld.processor.DefaultPostProcessor;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 
 /**
@@ -29,14 +30,17 @@ public class RouteBuilderImpl extends RouteBuilder
         
         from("direct:customerDetail")
                 .process(new DefaultGetProcessor())
+                .marshal().json(JsonLibrary.Gson)
                 .log("customerDetail body: ${body}");
         
          from("direct:customerOrders")
                 .process(new DefaultGetProcessor())
+                 .marshal().json(JsonLibrary.Gson)
                 .log("customerOrders body: ${body}");
          
          from("direct:customerNewOrder")
                 .process(new DefaultPostProcessor())
+                 .marshal().json(JsonLibrary.Gson)
                 .log("customerNewOrder body: ${body}");
     }
 }
