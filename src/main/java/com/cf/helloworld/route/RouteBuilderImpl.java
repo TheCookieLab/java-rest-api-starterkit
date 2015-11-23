@@ -13,7 +13,7 @@ import org.apache.camel.model.rest.RestBindingMode;
 
 /**
  *
- * @author David
+ * @author David Pang
  */
 public class RouteBuilderImpl extends RouteBuilder
 {
@@ -23,10 +23,10 @@ public class RouteBuilderImpl extends RouteBuilder
     {
         restConfiguration().component("spark-rest").scheme("http").host("localhost").port(9091).bindingMode(RestBindingMode.auto).enableCORS(true);
 
-        rest("/customers/")
-                .get("/{id}").to("direct:customerDetail")
-                .get("/{id}/orders").to("direct:customerOrders")
-                .post("/neworder").to("direct:customerNewOrder");
+        rest("/api/v1/")
+                .get("customers/{id}").to("direct:customerDetail")
+                .get("customers/{id}/orders").to("direct:customerOrders")
+                .post("/register").to("direct:register");
         
         from("direct:customerDetail")
                 .process(new DefaultGetProcessor())
@@ -38,9 +38,9 @@ public class RouteBuilderImpl extends RouteBuilder
                  .marshal().json(JsonLibrary.Gson)
                 .log("customerOrders body: ${body}");
          
-         from("direct:customerNewOrder")
+         from("direct:register")
                 .process(new DefaultPostProcessor())
                  .marshal().json(JsonLibrary.Gson)
-                .log("customerNewOrder body: ${body}");
+                .log("register body: ${body}");
     }
 }

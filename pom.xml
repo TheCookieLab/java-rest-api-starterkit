@@ -57,19 +57,14 @@
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-google-mail</artifactId>
+            <artifactId>camel-spark-rest</artifactId>
             <version>2.16.0</version>
             <exclusions>
                 <exclusion>
-                    <groupId>org.mortbay.jetty</groupId>
-                    <artifactId>jetty</artifactId>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-simple</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-spark-rest</artifactId>
-            <version>2.16.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>

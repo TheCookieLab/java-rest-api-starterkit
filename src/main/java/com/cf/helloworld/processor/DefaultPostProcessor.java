@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author David
+ * @author David Pang
  */
 public class DefaultPostProcessor implements Processor
 {
@@ -26,20 +26,22 @@ public class DefaultPostProcessor implements Processor
     @Override
     public void process(Exchange ex) throws Exception
     {
-        String body = ex.getIn().getBody(String.class);
-        logger.debug("Processing exchange " + ex.toString());
+        final long startTime = System.currentTimeMillis();
+        logger.debug("Processing exchange - " + ex.toString());
+        final String body = ex.getIn().getBody(String.class);
+        final Map<String, Object> headers = ex.getIn().getHeaders();
 
-        Map<String, Object> headers = ex.getIn().getHeaders();
-
+        StringBuilder sb = new StringBuilder();
         for (Map.Entry<String, Object> header : headers.entrySet())
         {
-            logger.debug(header.getKey() + " = " + header.getValue());            
+            sb.append(header.getKey()).append(" = ").append(header.getValue()).append(System.lineSeparator());
+
         }
-        
-        logger.debug("Body - " + body);
+        logger.debug("Headers: " + sb.toString());
 
         ex.getOut().setHeaders(ex.getIn().getHeaders());
         ex.getOut().setBody("DefaultPostProcessor processing complete");
+        logger.info("DefaultPostProcessor process() completed in " + (System.currentTimeMillis() - startTime) + " ms");
     }
 
 }

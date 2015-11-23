@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author David
+ * @author David Pang
  */
 public class Main {
 
