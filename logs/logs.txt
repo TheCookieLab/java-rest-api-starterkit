@@ -1,0 +1,35 @@
+2015-11-23 08:38:22,482 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
+2015-11-23 08:38:22,791 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-11-23 08:38:22,791 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-11-23 08:38:22,800 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2750) - Apache Camel 2.16.0 (CamelContext: camel-1) is starting
+2015-11-23 08:38:22,800 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2750) - Apache Camel 2.16.0 (CamelContext: camel-1) is starting
+2015-11-23 08:38:22,801 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-11-23 08:38:22,801 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-11-23 08:38:22,923 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-11-23 08:38:22,923 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2983) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2983) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2993) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2993) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-11-23 08:38:23,122 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-11-23 08:38:23,122 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-11-23 08:38:23,123 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-11-23 08:38:23,123 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-11-23 08:38:23,124 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-11-23 08:38:23,124 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-11-23 08:38:23,127 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
+2015-11-23 08:38:23,128 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
+2015-11-23 08:38:23,129 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-11-23 08:38:23,129 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-11-23 08:38:23,130 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
+2015-11-23 08:38:23,130 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-11-23 08:38:23,130 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-11-23 08:38:23,131 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
+2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2785) - Total 6 routes, of which 6 is started.
+2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2785) - Total 6 routes, of which 6 is started.
+2015-11-23 08:38:23,134 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2786) - Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.332 seconds
+2015-11-23 08:38:23,134 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2786) - Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.332 seconds
+2015-11-23 08:38:23,166 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
+2015-11-23 08:38:23,166 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
