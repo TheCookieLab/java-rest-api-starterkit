@@ -33,3 +33,56 @@
 2015-11-23 08:38:23,134 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2786) - Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.332 seconds
 2015-11-23 08:38:23,166 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
 2015-11-23 08:38:23,166 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
+2015-11-23 08:40:22,732 [qtp609514659-20] DEBUG spark.webserver.JettyHandler.doHandle(JettyHandler.java:57) - jettyhandler, handle();
+2015-11-23 08:40:22,734 [qtp609514659-20] DEBUG spark.webserver.MatcherFilter.doFilter(MatcherFilter.java:105) - httpMethod:post, uri: /api/v1/register
+2015-11-23 08:40:22,736 [qtp609514659-20] DEBUG spark.Request.getParams(Request.java:447) - get params
+2015-11-23 08:40:22,736 [qtp609514659-20] DEBUG spark.Request.getSplat(Request.java:465) - get splat
+2015-11-23 08:40:22,750 [qtp609514659-20] DEBUG com.cf.helloworld.processor.DefaultPostProcessor.process(DefaultPostProcessor.java:30) - Processing exchange - Exchange[ID-David-PC-60908-1448285902526-0-2][Message: this is the body]
+2015-11-23 08:40:22,750 [qtp609514659-20] DEBUG com.cf.helloworld.processor.DefaultPostProcessor.process(DefaultPostProcessor.java:40) - Headers: Accept = */*
+Accept-Encoding = gzip, deflate
+Accept-Language = en-US,en;q=0.8
+breadcrumbId = ID-David-PC-60908-1448285902526-0-1
+Cache-Control = no-cache
+CamelHttpMethod = POST
+CamelHttpPath = /api/v1/register
+CamelHttpQuery = null
+CamelHttpUri = /api/v1/register
+CamelHttpUrl = http://localhost:9091/api/v1/register
+Connection = keep-alive
+Content-Length = 16
+Content-Type = [text/plain;charset=UTF-8, text/plain;charset=UTF-8]
+DNT = 1
+header1 = value1
+Host = localhost:9091
+Origin = chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop
+Postman-Token = 63975951-a234-02ea-692c-39b566b5afa6
+splat = [Ljava.lang.String;@4b4894be
+User-Agent = Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+
+2015-11-23 08:40:22,750 [qtp609514659-20] INFO  com.cf.helloworld.processor.DefaultPostProcessor.process(DefaultPostProcessor.java:44) - DefaultPostProcessor process() completed in 0 ms
+2015-11-23 08:40:22,756 [qtp609514659-20] INFO  org.slf4j.helpers.MarkerIgnoringBase.info(MarkerIgnoringBase.java:95) - register body: "DefaultPostProcessor processing complete"
+2015-11-23 08:48:23,372 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3010) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutting down
+2015-11-23 08:48:23,372 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3010) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutting down
+2015-11-23 08:48:23,375 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:190) - Starting to graceful shutdown 6 routes (timeout 300 seconds)
+2015-11-23 08:48:23,375 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:190) - Starting to graceful shutdown 6 routes (timeout 300 seconds)
+2015-11-23 08:48:23,386 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route3 shutdown complete, was consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-11-23 08:48:23,386 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route3 shutdown complete, was consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-11-23 08:48:23,388 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route2 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-11-23 08:48:23,388 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route2 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-11-23 08:48:23,389 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-11-23 08:48:23,389 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-11-23 08:48:23,390 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route6 shutdown complete, was consuming from: Endpoint[direct://register]
+2015-11-23 08:48:23,390 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route6 shutdown complete, was consuming from: Endpoint[direct://register]
+2015-11-23 08:48:23,391 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route5 shutdown complete, was consuming from: Endpoint[direct://customerOrders]
+2015-11-23 08:48:23,391 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route5 shutdown complete, was consuming from: Endpoint[direct://customerOrders]
+2015-11-23 08:48:23,392 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route4 shutdown complete, was consuming from: Endpoint[direct://customerDetail]
+2015-11-23 08:48:23,392 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route4 shutdown complete, was consuming from: Endpoint[direct://customerDetail]
+2015-11-23 08:48:23,393 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:254) - Graceful shutdown of 6 routes completed in 0 seconds
+2015-11-23 08:48:23,393 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:254) - Graceful shutdown of 6 routes completed in 0 seconds
+2015-11-23 08:48:23,402 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:150) - >>> Spark shutting down ...
+2015-11-23 08:48:23,408 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:159) - done
+2015-11-23 08:48:23,412 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3095) - Apache Camel 2.16.0 (CamelContext: camel-1) uptime 10 minutes
+2015-11-23 08:48:23,412 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3095) - Apache Camel 2.16.0 (CamelContext: camel-1) uptime 10 minutes
+2015-11-23 08:48:23,413 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3096) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutdown in 0.040 seconds
+2015-11-23 08:48:23,413 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3096) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutdown in 0.040 seconds
+2015-11-23 08:48:23,413 [main] INFO  com.cf.helloworld.Main.main(Main.java:38) - Stopping HelloWorld
