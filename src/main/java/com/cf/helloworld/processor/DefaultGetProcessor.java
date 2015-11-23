@@ -5,8 +5,6 @@
  */
 package com.cf.helloworld.processor;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
