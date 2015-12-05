@@ -28,9 +28,9 @@ public class Main {
             
             context.start();
       
+            final long sleepDurationInMs = 1000;
             for (int i = 0; i < 600; i++)
-            {
-                final long sleepDurationInMs = 1000;
+            {                
                 Thread.sleep(sleepDurationInMs);
             }
                  

@@ -1,88 +1,253 @@
-2015-11-23 08:38:22,482 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
-2015-11-23 08:38:22,791 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
-2015-11-23 08:38:22,791 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
-2015-11-23 08:38:22,800 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2750) - Apache Camel 2.16.0 (CamelContext: camel-1) is starting
-2015-11-23 08:38:22,800 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2750) - Apache Camel 2.16.0 (CamelContext: camel-1) is starting
-2015-11-23 08:38:22,801 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
-2015-11-23 08:38:22,801 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
-2015-11-23 08:38:22,923 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
-2015-11-23 08:38:22,923 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
-2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2983) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
-2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2983) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
-2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2993) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
-2015-11-23 08:38:23,018 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2993) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
-2015-11-23 08:38:23,122 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
-2015-11-23 08:38:23,122 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
-2015-11-23 08:38:23,123 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
-2015-11-23 08:38:23,123 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
-2015-11-23 08:38:23,124 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route6 started and consuming from: Endpoint[direct://register]
-2015-11-23 08:38:23,124 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route6 started and consuming from: Endpoint[direct://register]
-2015-11-23 08:38:23,127 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
-2015-11-23 08:38:23,128 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
-2015-11-23 08:38:23,129 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
-2015-11-23 08:38:23,129 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
-2015-11-23 08:38:23,130 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
-2015-11-23 08:38:23,130 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
-2015-11-23 08:38:23,130 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
-2015-11-23 08:38:23,131 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
-2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
-2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3514) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
-2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2785) - Total 6 routes, of which 6 is started.
-2015-11-23 08:38:23,132 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2785) - Total 6 routes, of which 6 is started.
-2015-11-23 08:38:23,134 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2786) - Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.332 seconds
-2015-11-23 08:38:23,134 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2786) - Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.332 seconds
-2015-11-23 08:38:23,166 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
-2015-11-23 08:38:23,166 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
-2015-11-23 08:40:22,732 [qtp609514659-20] DEBUG spark.webserver.JettyHandler.doHandle(JettyHandler.java:57) - jettyhandler, handle();
-2015-11-23 08:40:22,734 [qtp609514659-20] DEBUG spark.webserver.MatcherFilter.doFilter(MatcherFilter.java:105) - httpMethod:post, uri: /api/v1/register
-2015-11-23 08:40:22,736 [qtp609514659-20] DEBUG spark.Request.getParams(Request.java:447) - get params
-2015-11-23 08:40:22,736 [qtp609514659-20] DEBUG spark.Request.getSplat(Request.java:465) - get splat
-2015-11-23 08:40:22,750 [qtp609514659-20] DEBUG com.cf.helloworld.processor.DefaultPostProcessor.process(DefaultPostProcessor.java:30) - Processing exchange - Exchange[ID-David-PC-60908-1448285902526-0-2][Message: this is the body]
-2015-11-23 08:40:22,750 [qtp609514659-20] DEBUG com.cf.helloworld.processor.DefaultPostProcessor.process(DefaultPostProcessor.java:40) - Headers: Accept = */*
-Accept-Encoding = gzip, deflate
+2015-12-05 15:40:54,931 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
+2015-12-05 15:40:55,242 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-12-05 15:40:55,252 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2763) - Apache Camel 2.16.1 (CamelContext: camel-1) is starting
+2015-12-05 15:40:55,253 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-12-05 15:40:55,395 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-12-05 15:40:55,506 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2996) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-12-05 15:40:55,506 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3006) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-12-05 15:40:55,624 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-12-05 15:40:55,626 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-12-05 15:40:55,626 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-12-05 15:40:55,629 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
+2015-12-05 15:40:55,631 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
+2015-12-05 15:40:55,632 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 15:40:55,633 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
+2015-12-05 15:40:55,634 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 15:40:55,635 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
+2015-12-05 15:40:55,636 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 15:40:55,637 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2798) - Total 6 routes, of which 6 is started.
+2015-12-05 15:40:55,639 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2799) - Apache Camel 2.16.1 (CamelContext: camel-1) started in 0.385 seconds
+2015-12-05 15:40:55,685 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
+2015-12-05 15:40:55,686 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
+2015-12-05 15:50:55,830 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3023) - Apache Camel 2.16.1 (CamelContext: camel-1) is shutting down
+2015-12-05 15:50:55,831 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:195) - Starting to graceful shutdown 6 routes (timeout 300 seconds)
+2015-12-05 15:50:55,835 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route3 shutdown complete, was consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 15:50:55,836 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route2 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 15:50:55,836 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 15:50:55,836 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route6 shutdown complete, was consuming from: Endpoint[direct://register]
+2015-12-05 15:50:55,837 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route5 shutdown complete, was consuming from: Endpoint[direct://customerOrders]
+2015-12-05 15:50:55,837 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route4 shutdown complete, was consuming from: Endpoint[direct://customerDetail]
+2015-12-05 15:50:55,838 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:259) - Graceful shutdown of 6 routes completed in 0 seconds
+2015-12-05 15:50:55,841 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:150) - >>> Spark shutting down ...
+2015-12-05 15:50:55,844 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:159) - done
+2015-12-05 15:50:55,847 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3108) - Apache Camel 2.16.1 (CamelContext: camel-1) uptime 10 minutes
+2015-12-05 15:50:55,847 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3109) - Apache Camel 2.16.1 (CamelContext: camel-1) is shutdown in 0.017 seconds
+2015-12-05 15:50:55,847 [main] INFO  com.cf.helloworld.Main.main(Main.java:38) - Stopping HelloWorld
+2015-12-05 15:53:54,943 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
+2015-12-05 15:53:55,237 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-12-05 15:53:55,247 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2763) - Apache Camel 2.16.1 (CamelContext: camel-1) is starting
+2015-12-05 15:53:55,248 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-12-05 15:53:55,376 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-12-05 15:53:55,475 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2996) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-12-05 15:53:55,476 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3006) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-12-05 15:53:55,588 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-12-05 15:53:55,589 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-12-05 15:53:55,590 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-12-05 15:53:55,593 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
+2015-12-05 15:53:55,594 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
+2015-12-05 15:53:55,595 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 15:53:55,596 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
+2015-12-05 15:53:55,596 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 15:53:55,597 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
+2015-12-05 15:53:55,598 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 15:53:55,598 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2798) - Total 6 routes, of which 6 is started.
+2015-12-05 15:53:55,600 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2799) - Apache Camel 2.16.1 (CamelContext: camel-1) started in 0.352 seconds
+2015-12-05 15:53:55,635 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
+2015-12-05 15:53:55,635 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
+2015-12-05 16:02:29,784 [qtp939275297-21] DEBUG spark.webserver.JettyHandler.doHandle(JettyHandler.java:57) - jettyhandler, handle();
+2015-12-05 16:02:29,786 [qtp939275297-21] DEBUG spark.webserver.MatcherFilter.doFilter(MatcherFilter.java:105) - httpMethod:get, uri: /api/v1/customers/999
+2015-12-05 16:02:29,788 [qtp939275297-21] DEBUG spark.Request.getParams(Request.java:447) - get params
+2015-12-05 16:02:29,788 [qtp939275297-21] DEBUG spark.Request.getParams(Request.java:454) - matchedPart: :id = 999
+2015-12-05 16:02:29,788 [qtp939275297-21] DEBUG spark.Request.getSplat(Request.java:465) - get splat
+2015-12-05 16:02:29,803 [qtp939275297-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:18) - Processing exchange - Exchange[ID-David-PC-50234-1449348834994-0-2][Message: ]
+2015-12-05 16:02:29,803 [qtp939275297-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:23) - ID: 999
+2015-12-05 16:02:29,803 [qtp939275297-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:26) - CamelHttpQuery: null
+2015-12-05 16:02:29,803 [qtp939275297-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:34) - Headers: Accept = */*
+Accept-Encoding = gzip, deflate, sdch
 Accept-Language = en-US,en;q=0.8
-breadcrumbId = ID-David-PC-60908-1448285902526-0-1
+breadcrumbId = ID-David-PC-50234-1449348834994-0-1
 Cache-Control = no-cache
-CamelHttpMethod = POST
-CamelHttpPath = /api/v1/register
+CamelHttpMethod = GET
+CamelHttpPath = /api/v1/customers/999
 CamelHttpQuery = null
-CamelHttpUri = /api/v1/register
-CamelHttpUrl = http://localhost:9091/api/v1/register
+CamelHttpUri = /api/v1/customers/999
+CamelHttpUrl = http://localhost:9091/api/v1/customers/999
 Connection = keep-alive
-Content-Length = 16
-Content-Type = [text/plain;charset=UTF-8, text/plain;charset=UTF-8]
+Content-Type = null
 DNT = 1
-header1 = value1
+hello = world
 Host = localhost:9091
-Origin = chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop
-Postman-Token = 63975951-a234-02ea-692c-39b566b5afa6
-splat = [Ljava.lang.String;@4b4894be
-User-Agent = Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+id = 999
+Postman-Token = 621a437e-8f21-98bf-0372-d1025bce0004
+splat = [Ljava.lang.String;@62519be9
+User-Agent = Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36
 
-2015-11-23 08:40:22,750 [qtp609514659-20] INFO  com.cf.helloworld.processor.DefaultPostProcessor.process(DefaultPostProcessor.java:44) - DefaultPostProcessor process() completed in 0 ms
-2015-11-23 08:40:22,756 [qtp609514659-20] INFO  org.slf4j.helpers.MarkerIgnoringBase.info(MarkerIgnoringBase.java:95) - register body: "DefaultPostProcessor processing complete"
-2015-11-23 08:48:23,372 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3010) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutting down
-2015-11-23 08:48:23,372 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3010) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutting down
-2015-11-23 08:48:23,375 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:190) - Starting to graceful shutdown 6 routes (timeout 300 seconds)
-2015-11-23 08:48:23,375 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:190) - Starting to graceful shutdown 6 routes (timeout 300 seconds)
-2015-11-23 08:48:23,386 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route3 shutdown complete, was consuming from: Endpoint[spark-rest://post:api/v1/register]
-2015-11-23 08:48:23,386 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route3 shutdown complete, was consuming from: Endpoint[spark-rest://post:api/v1/register]
-2015-11-23 08:48:23,388 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route2 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
-2015-11-23 08:48:23,388 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route2 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
-2015-11-23 08:48:23,389 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
-2015-11-23 08:48:23,389 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
-2015-11-23 08:48:23,390 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route6 shutdown complete, was consuming from: Endpoint[direct://register]
-2015-11-23 08:48:23,390 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route6 shutdown complete, was consuming from: Endpoint[direct://register]
-2015-11-23 08:48:23,391 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route5 shutdown complete, was consuming from: Endpoint[direct://customerOrders]
-2015-11-23 08:48:23,391 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route5 shutdown complete, was consuming from: Endpoint[direct://customerOrders]
-2015-11-23 08:48:23,392 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route4 shutdown complete, was consuming from: Endpoint[direct://customerDetail]
-2015-11-23 08:48:23,392 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:663) - Route: route4 shutdown complete, was consuming from: Endpoint[direct://customerDetail]
-2015-11-23 08:48:23,393 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:254) - Graceful shutdown of 6 routes completed in 0 seconds
-2015-11-23 08:48:23,393 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:254) - Graceful shutdown of 6 routes completed in 0 seconds
-2015-11-23 08:48:23,402 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:150) - >>> Spark shutting down ...
-2015-11-23 08:48:23,408 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:159) - done
-2015-11-23 08:48:23,412 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3095) - Apache Camel 2.16.0 (CamelContext: camel-1) uptime 10 minutes
-2015-11-23 08:48:23,412 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3095) - Apache Camel 2.16.0 (CamelContext: camel-1) uptime 10 minutes
-2015-11-23 08:48:23,413 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3096) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutdown in 0.040 seconds
-2015-11-23 08:48:23,413 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3096) - Apache Camel 2.16.0 (CamelContext: camel-1) is shutdown in 0.040 seconds
-2015-11-23 08:48:23,413 [main] INFO  com.cf.helloworld.Main.main(Main.java:38) - Stopping HelloWorld
+2015-12-05 16:02:29,803 [qtp939275297-21] INFO  com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:38) - DefaultPostProcessor process() completed in 1 ms
+2015-12-05 16:02:29,809 [qtp939275297-21] INFO  org.slf4j.helpers.MarkerIgnoringBase.info(MarkerIgnoringBase.java:95) - customerDetail body: "DefaultGetProcessor processing complete"
+2015-12-05 16:03:57,020 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
+2015-12-05 16:03:57,313 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-12-05 16:03:57,322 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2763) - Apache Camel 2.16.1 (CamelContext: camel-1) is starting
+2015-12-05 16:03:57,323 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-12-05 16:03:57,456 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-12-05 16:03:57,549 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2996) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-12-05 16:03:57,549 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3006) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-12-05 16:03:57,664 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-12-05 16:03:57,665 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-12-05 16:03:57,665 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-12-05 16:03:57,668 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
+2015-12-05 16:03:57,669 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
+2015-12-05 16:03:57,670 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 16:03:57,671 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
+2015-12-05 16:03:57,671 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 16:03:57,672 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
+2015-12-05 16:03:57,674 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 16:03:57,674 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2798) - Total 6 routes, of which 6 is started.
+2015-12-05 16:03:57,676 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2799) - Apache Camel 2.16.1 (CamelContext: camel-1) started in 0.352 seconds
+2015-12-05 16:03:57,710 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
+2015-12-05 16:03:57,710 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
+2015-12-05 16:04:54,256 [qtp590593743-21] DEBUG spark.webserver.JettyHandler.doHandle(JettyHandler.java:57) - jettyhandler, handle();
+2015-12-05 16:04:54,258 [qtp590593743-21] DEBUG spark.webserver.MatcherFilter.doFilter(MatcherFilter.java:105) - httpMethod:get, uri: /api/v1/customers/999
+2015-12-05 16:04:54,260 [qtp590593743-21] DEBUG spark.Request.getParams(Request.java:447) - get params
+2015-12-05 16:04:54,260 [qtp590593743-21] DEBUG spark.Request.getParams(Request.java:454) - matchedPart: :id = 999
+2015-12-05 16:04:54,260 [qtp590593743-21] DEBUG spark.Request.getSplat(Request.java:465) - get splat
+2015-12-05 16:04:54,273 [qtp590593743-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:18) - Processing exchange - Exchange[ID-David-PC-50645-1449349437069-0-2][Message: ]
+2015-12-05 16:04:54,274 [qtp590593743-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:23) - ID: 999
+2015-12-05 16:04:54,274 [qtp590593743-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:26) - CamelHttpQuery: null
+2015-12-05 16:04:54,274 [qtp590593743-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:34) - Headers: Accept = */*
+Accept-Encoding = gzip, deflate, sdch
+Accept-Language = en-US,en;q=0.8
+breadcrumbId = ID-David-PC-50645-1449349437069-0-1
+Cache-Control = no-cache
+CamelHttpMethod = GET
+CamelHttpPath = /api/v1/customers/999
+CamelHttpQuery = null
+CamelHttpUri = /api/v1/customers/999
+CamelHttpUrl = http://localhost:9091/api/v1/customers/999
+Connection = keep-alive
+Content-Type = null
+DNT = 1
+hello = world
+Host = localhost:9091
+id = 999
+Postman-Token = 8c123234-f0e1-147d-3dfb-497dd2c3f601
+splat = [Ljava.lang.String;@25f89658
+User-Agent = Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36
+
+2015-12-05 16:04:54,274 [qtp590593743-21] INFO  com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:38) - DefaultPostProcessor process() completed in 1 ms
+2015-12-05 16:04:54,280 [qtp590593743-21] INFO  org.slf4j.helpers.MarkerIgnoringBase.info(MarkerIgnoringBase.java:95) - customerDetail body: "DefaultGetProcessor processing complete for id: 999"
+2015-12-05 16:13:57,868 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3023) - Apache Camel 2.16.1 (CamelContext: camel-1) is shutting down
+2015-12-05 16:13:57,869 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:195) - Starting to graceful shutdown 6 routes (timeout 300 seconds)
+2015-12-05 16:13:57,873 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route3 shutdown complete, was consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 16:13:57,874 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route2 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 16:13:57,874 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route1 shutdown complete, was consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 16:13:57,874 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route6 shutdown complete, was consuming from: Endpoint[direct://register]
+2015-12-05 16:13:57,875 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route5 shutdown complete, was consuming from: Endpoint[direct://customerOrders]
+2015-12-05 16:13:57,875 [Camel (camel-1) thread #0 - ShutdownTask] INFO  org.apache.camel.impl.DefaultShutdownStrategy$ShutdownTask.run(DefaultShutdownStrategy.java:668) - Route: route4 shutdown complete, was consuming from: Endpoint[direct://customerDetail]
+2015-12-05 16:13:57,875 [main] INFO  org.apache.camel.impl.DefaultShutdownStrategy.doShutdown(DefaultShutdownStrategy.java:259) - Graceful shutdown of 6 routes completed in 0 seconds
+2015-12-05 16:13:57,878 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:150) - >>> Spark shutting down ...
+2015-12-05 16:13:57,881 [main] INFO  spark.webserver.SparkServer.stop(SparkServer.java:159) - done
+2015-12-05 16:13:57,884 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3108) - Apache Camel 2.16.1 (CamelContext: camel-1) uptime 10 minutes
+2015-12-05 16:13:57,884 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStop(DefaultCamelContext.java:3109) - Apache Camel 2.16.1 (CamelContext: camel-1) is shutdown in 0.015 seconds
+2015-12-05 16:13:57,884 [main] INFO  com.cf.helloworld.Main.main(Main.java:38) - Stopping HelloWorld
+2015-12-05 16:19:49,816 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
+2015-12-05 16:19:50,106 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-12-05 16:19:50,115 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2763) - Apache Camel 2.16.1 (CamelContext: camel-1) is starting
+2015-12-05 16:19:50,116 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-12-05 16:19:50,246 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-12-05 16:19:50,338 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2996) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-12-05 16:19:50,338 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3006) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-12-05 16:19:50,448 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-12-05 16:19:50,449 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-12-05 16:19:50,449 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-12-05 16:19:50,452 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
+2015-12-05 16:19:50,454 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
+2015-12-05 16:19:50,454 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 16:19:50,455 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
+2015-12-05 16:19:50,455 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 16:19:50,457 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
+2015-12-05 16:19:50,458 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 16:19:50,459 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2798) - Total 6 routes, of which 6 is started.
+2015-12-05 16:19:50,461 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2799) - Apache Camel 2.16.1 (CamelContext: camel-1) started in 0.345 seconds
+2015-12-05 16:19:50,494 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
+2015-12-05 16:19:50,494 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
+2015-12-05 16:19:57,210 [qtp1263940451-15] DEBUG spark.webserver.JettyHandler.doHandle(JettyHandler.java:57) - jettyhandler, handle();
+2015-12-05 16:19:57,212 [qtp1263940451-15] DEBUG spark.webserver.MatcherFilter.doFilter(MatcherFilter.java:105) - httpMethod:get, uri: /api/v1/customers/999
+2015-12-05 16:19:57,214 [qtp1263940451-15] DEBUG spark.Request.getParams(Request.java:447) - get params
+2015-12-05 16:19:57,214 [qtp1263940451-15] DEBUG spark.Request.getParams(Request.java:454) - matchedPart: :id = 999
+2015-12-05 16:19:57,214 [qtp1263940451-15] DEBUG spark.Request.getSplat(Request.java:465) - get splat
+2015-12-05 16:19:57,227 [qtp1263940451-15] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:18) - Processing exchange - Exchange[ID-David-PC-51265-1449350389863-0-2][Message: ]
+2015-12-05 16:19:57,227 [qtp1263940451-15] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:23) - ID: 999
+2015-12-05 16:19:57,227 [qtp1263940451-15] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:26) - CamelHttpQuery: null
+2015-12-05 16:19:57,228 [qtp1263940451-15] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:34) - Headers: Accept = */*
+Accept-Encoding = gzip, deflate, sdch
+Accept-Language = en-US,en;q=0.8
+breadcrumbId = ID-David-PC-51265-1449350389863-0-1
+Cache-Control = no-cache
+CamelHttpMethod = GET
+CamelHttpPath = /api/v1/customers/999
+CamelHttpQuery = null
+CamelHttpUri = /api/v1/customers/999
+CamelHttpUrl = http://localhost:9091/api/v1/customers/999
+Connection = keep-alive
+Content-Type = null
+DNT = 1
+hello = world
+Host = localhost:9091
+id = 999
+Postman-Token = 246287a2-9d9e-1334-a3b5-db0e210dfdda
+splat = [Ljava.lang.String;@363d50a8
+User-Agent = Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36
+
+2015-12-05 16:19:57,228 [qtp1263940451-15] INFO  com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:38) - DefaultPostProcessor process() completed in 1 ms
+2015-12-05 16:19:57,233 [qtp1263940451-15] INFO  org.slf4j.helpers.MarkerIgnoringBase.info(MarkerIgnoringBase.java:95) - customerDetail body: "DefaultGetProcessor processing complete for id: 999"
+2015-12-05 16:32:00,216 [main] INFO  com.cf.helloworld.Main.main(Main.java:25) - Starting HelloWorld
+2015-12-05 16:32:00,508 [main] INFO  org.apache.camel.impl.converter.DefaultTypeConverter.doStart(DefaultTypeConverter.java:56) - Loaded 182 type converters
+2015-12-05 16:32:00,517 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2763) - Apache Camel 2.16.1 (CamelContext: camel-1) is starting
+2015-12-05 16:32:00,518 [main] INFO  org.apache.camel.management.ManagedManagementStrategy.doStart(ManagedManagementStrategy.java:191) - JMX is enabled
+2015-12-05 16:32:00,649 [main] INFO  org.apache.camel.impl.DefaultRuntimeEndpointRegistry.doStart(DefaultRuntimeEndpointRegistry.java:203) - Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2015-12-05 16:32:00,750 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2996) - AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2015-12-05 16:32:00,750 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:3006) - StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2015-12-05 16:32:00,867 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route4 started and consuming from: Endpoint[direct://customerDetail]
+2015-12-05 16:32:00,868 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route5 started and consuming from: Endpoint[direct://customerOrders]
+2015-12-05 16:32:00,869 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route6 started and consuming from: Endpoint[direct://register]
+2015-12-05 16:32:00,871 [main] DEBUG spark.route.RouteMatcherFactory.get(RouteMatcherFactory.java:38) - creates RouteMatcher
+2015-12-05 16:32:00,873 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id, spark.SparkBase$1@4a668b6e
+2015-12-05 16:32:00,873 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route1 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id]
+2015-12-05 16:32:00,875 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: get, api/v1/customers/:id/orders, spark.SparkBase$1@5f683daf
+2015-12-05 16:32:00,875 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route2 started and consuming from: Endpoint[spark-rest://get:api/v1/customers/:id/orders]
+2015-12-05 16:32:00,876 [main] DEBUG spark.route.SimpleRouteMatcher.addRoute(SimpleRouteMatcher.java:184) - Adds route: post, api/v1/register, spark.SparkBase$1@78ffe6dc
+2015-12-05 16:32:00,877 [main] INFO  org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3527) - Route: route3 started and consuming from: Endpoint[spark-rest://post:api/v1/register]
+2015-12-05 16:32:00,878 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2798) - Total 6 routes, of which 6 is started.
+2015-12-05 16:32:00,879 [main] INFO  org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2799) - Apache Camel 2.16.1 (CamelContext: camel-1) started in 0.361 seconds
+2015-12-05 16:32:00,911 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:137) - == Spark has ignited ...
+2015-12-05 16:32:00,912 [Thread-1] INFO  spark.webserver.SparkServer.ignite(SparkServer.java:138) - >> Listening on 0.0.0.0:9091
+2015-12-05 16:32:05,869 [qtp906432518-21] DEBUG spark.webserver.JettyHandler.doHandle(JettyHandler.java:57) - jettyhandler, handle();
+2015-12-05 16:32:05,870 [qtp906432518-21] DEBUG spark.webserver.MatcherFilter.doFilter(MatcherFilter.java:105) - httpMethod:get, uri: /api/v1/customers/999
+2015-12-05 16:32:05,872 [qtp906432518-21] DEBUG spark.Request.getParams(Request.java:447) - get params
+2015-12-05 16:32:05,872 [qtp906432518-21] DEBUG spark.Request.getParams(Request.java:454) - matchedPart: :id = 999
+2015-12-05 16:32:05,873 [qtp906432518-21] DEBUG spark.Request.getSplat(Request.java:465) - get splat
+2015-12-05 16:32:05,886 [qtp906432518-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:19) - Processing exchange - Exchange[ID-David-PC-51683-1449351120262-0-2][Message: ]
+2015-12-05 16:32:05,887 [qtp906432518-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:24) - ID: 999
+2015-12-05 16:32:05,887 [qtp906432518-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:27) - CamelHttpQuery: null
+2015-12-05 16:32:05,887 [qtp906432518-21] DEBUG com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:35) - Headers: Accept = */*
+Accept-Encoding = gzip, deflate, sdch
+Accept-Language = en-US,en;q=0.8
+breadcrumbId = ID-David-PC-51683-1449351120262-0-1
+Cache-Control = no-cache
+CamelHttpMethod = GET
+CamelHttpPath = /api/v1/customers/999
+CamelHttpQuery = null
+CamelHttpUri = /api/v1/customers/999
+CamelHttpUrl = http://localhost:9091/api/v1/customers/999
+Connection = keep-alive
+Content-Type = null
+DNT = 1
+hello = world
+Host = localhost:9091
+id = 999
+Postman-Token = 9b931b41-a6bb-cdd9-f71c-0ea9c69a7634
+splat = [Ljava.lang.String;@4a4b211
+User-Agent = Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36
+
+2015-12-05 16:32:05,888 [qtp906432518-21] INFO  com.cf.helloworld.processor.DefaultGetProcessor.process(DefaultGetProcessor.java:42) - DefaultPostProcessor process() completed in 2 ms
+2015-12-05 16:32:05,897 [qtp906432518-21] INFO  org.slf4j.helpers.MarkerIgnoringBase.info(MarkerIgnoringBase.java:95) - customerDetail body: {"id":"999","name":"Billy Bob","emailAddress":"b.bob@aol.com","birthday":"Dec 5, 2015 4:32:05 PM"}
