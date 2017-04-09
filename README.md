@@ -8,5 +8,5 @@ http://localhost:9091/api/v1/customers/{id}
 
 http://localhost:9091/api/v1/customers/{id}/orders
 
-Full walkthrough can be found here: http://blockchainhero.com/2015/12/05/standing-up-a-rest-api-in-java/
+Full walkthrough can be found here: https://blockchainhero.com/?p=266
 
