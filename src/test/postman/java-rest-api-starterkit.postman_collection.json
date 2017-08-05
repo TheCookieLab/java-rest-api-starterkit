@@ -1,0 +1,48 @@
+{
+	"variables": [],
+	"info": {
+		"name": "java-rest-api-starterkit",
+		"_postman_id": "28ade047-d3b2-e02f-686f-775f618d996d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"url": "http://localhost:9091/api/v1/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "header1",
+						"value": "value1",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "this is the body"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"url": "http://localhost:9091/api/v1/customers/999",
+				"method": "GET",
+				"header": [
+					{
+						"key": "hello",
+						"value": "world",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

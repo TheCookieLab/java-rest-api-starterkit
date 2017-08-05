@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cf.helloworld.processor;
 
 import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
@@ -18,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class DefaultPostProcessor implements Processor
 {
 
-    private final Logger logger = LoggerFactory.getLogger(DefaultPostProcessor.class);
+    private final Logger logger = LogManager.getLogger(DefaultPostProcessor.class);
 
     @Override
     public void process(Exchange ex) throws Exception

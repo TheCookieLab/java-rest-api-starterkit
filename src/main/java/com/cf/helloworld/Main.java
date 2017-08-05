@@ -1,46 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cf.helloworld;
 
 import com.cf.helloworld.route.RouteBuilderImpl;
+import java.util.concurrent.TimeUnit;
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
  * @author David Pang
  */
-public class Main {
+public class Main
+{
 
-    public static void main(String[] args) throws InterruptedException  {
-        final Logger logger = LoggerFactory.getLogger(Main.class);
+    public static void main(String[] args) throws InterruptedException
+    {
+        Logger logger = LogManager.getLogger();
 
-        try {
+        try
+        {
 
-            logger.info("Starting HelloWorld");
+            logger.info("Starting Java-Rest-API-StarterKit");
             CamelContext context = new DefaultCamelContext();
             context.addRoutes(new RouteBuilderImpl());
-            
+
             context.start();
-      
+
             final long sleepDurationInMs = 1000;
             for (int i = 0; i < 600; i++)
-            {                
-                Thread.sleep(sleepDurationInMs);
+            {
+                TimeUnit.SECONDS.sleep(sleepDurationInMs);
             }
-                 
+
             context.stop();
             logger.info("Stopping HelloWorld");
-            
-        }catch (InterruptedException iex) {
+
+        }
+        catch (InterruptedException iex)
+        {
             throw iex;
         }
-        catch (Exception ex) {
+        catch (Exception ex)
+        {
             logger.error("Main failed - " + ex.getMessage(), ex);
         }
     }

@@ -17,20 +17,20 @@ public class RouteBuilderImpl extends RouteBuilder
                 .get("customers/{id}").to("direct:customerDetail")
                 .get("customers/{id}/orders").to("direct:customerOrders")
                 .post("/register").to("direct:register");
-        
+
         from("direct:customerDetail")
                 .process(new DefaultGetProcessor())
                 .marshal().json(JsonLibrary.Gson)
                 .log("customerDetail body: ${body}");
-        
-         from("direct:customerOrders")
+
+        from("direct:customerOrders")
                 .process(new DefaultGetProcessor())
-                 .marshal().json(JsonLibrary.Gson)
+                .marshal().json(JsonLibrary.Gson)
                 .log("customerOrders body: ${body}");
-         
-         from("direct:register")
+
+        from("direct:register")
                 .process(new DefaultPostProcessor())
-                 .marshal().json(JsonLibrary.Gson)
+                .marshal().json(JsonLibrary.Gson)
                 .log("register body: ${body}");
     }
 }

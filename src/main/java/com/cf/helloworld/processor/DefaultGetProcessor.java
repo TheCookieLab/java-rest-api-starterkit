@@ -1,16 +1,17 @@
 package com.cf.helloworld.processor;
+
 import com.cf.helloworld.response.CustomerDetailResponse;
 import java.util.Date;
 import java.util.Map;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DefaultGetProcessor implements Processor
 {
 
-    private final Logger logger = LoggerFactory.getLogger(DefaultGetProcessor.class);
+    private final Logger logger = LogManager.getLogger(DefaultGetProcessor.class);
 
     @Override
     public void process(Exchange ex) throws Exception
@@ -19,8 +20,8 @@ public class DefaultGetProcessor implements Processor
         logger.debug("Processing exchange - " + ex.toString());
         final String request = ex.getIn().getBody(String.class);
         final Map<String, Object> headers = ex.getIn().getHeaders();
-        
-        final Object id = headers.get("id");     
+
+        final Object id = headers.get("id");
         logger.debug("ID: " + id);
 
         final Object httpQuery = headers.get("CamelHttpQuery");
@@ -33,13 +34,12 @@ public class DefaultGetProcessor implements Processor
 
         }
         logger.debug("Headers: " + sb.toString());
-        
-        // Construct output
+
         CustomerDetailResponse response = new CustomerDetailResponse(id.toString(), "Billy Bob", "b.bob@aol.com", new Date());
 
         ex.getOut().setHeaders(ex.getIn().getHeaders());
         ex.getOut().setBody(response);
-        logger.info("DefaultPostProcessor process() completed in " + (System.currentTimeMillis() - startTime) + " ms");
+        logger.info("DefaultGetProcessor process() completed in " + (System.currentTimeMillis() - startTime) + " ms");
     }
 
 }
