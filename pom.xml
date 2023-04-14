@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <apache.camel.version>2.24.0</apache.camel.version>
+        <apache.camel.version>3.2.0</apache.camel.version>
         <maven.javadoc.skip>true</maven.javadoc.skip>
     </properties>
     <build>
